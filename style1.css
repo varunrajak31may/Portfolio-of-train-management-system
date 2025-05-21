@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added box-sizing to ensure padding and border are included in the element's total width and height */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1087e7;
+    color: #000000;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  nav {
+    display: none; /* Hidden by default for mobile view */
+  }
+  
+  .test1[type="checkbox"] {
+    display: none;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    nav {
+      display: none; /* Hide menu by default */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  
+    .test1[type="checkbox"]:checked ~ nav {
+      display: flex;
+    }
+  
+    .temp {
+      display: block;
+    }
+  }
+  
+  /* Booking Section */
+  #booking {
+    padding: 80px 0;
+    text-align: center;
+    background: #1087e7;
+  }
+  
+  #booking h2 {
+    margin-bottom: 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #555;
+    color: black;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 80px 0;
+    text-align: center;
+    background: #1087e7;
+  }
+  
+  #contact h2 {
+    margin-bottom: 40px;
+  }
+  
+  #contact p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .btn {
+    background: #e5fd0b;
+    color: #d9d20c;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: solid black;
+  }
+  
+  .btn:hover {
+    background: #555;
+  }
+  
+  /* About Us Section */
+  #about {
+    padding: 80px 0;
+    background: #abaec2;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .about-image {
+    margin-top: 30px;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Feature Section */
+  #features {
+    padding: 80px 0;
+    text-align: center;
+    background: #afb08e;
+  }
+  
+  #features h2 {
+    margin-top: 5px;
+  }
+  
+  .feature {
+    margin-bottom: 20px;
+  }
+  
+  .feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  #features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Card Section */
+  .card-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #1087e7;
+  }
+  
+  .card {
+    background-color: #1087e7;
+    border: 1px solid #8b908a;
+    border-radius: 5px;
+    box-shadow: 3px 4px 11px 3px;
+    flex: 1;
+    margin: 10px;
+    max-width: 22%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  
+  .card a {
+    color: rgb(209, 13, 13);
+    border: solid black;
+    margin: 5px;
+  }
+  
+  .card img {
+    height: 250px;
+  }
+  
+  @media (max-width: 1200px) {
+    .card {
+      max-width: 45%;
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%;
+      flex: 1 1 calc(100% - 20px);
+    }
+  }
+  
+  /* Schedule Section */
+  .schedule-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .schedule-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #b83636;
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  .schedule-table th {
+    background-color: #333;
+    color: #ec2828;
+  }
+  
+  .schedule-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .schedule-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .schedule-table td {
+    color: #333;
+  }
+  
+  .schedule-table td.status-on-time {
+    color: green;
+  }
+  
+  .schedule-table td.status-delayed {
+    color: orange;
+  }
+  
+  .schedule-table td.status-cancelled {
+    color: red;
+  }
+  
+  .schedule {
+    padding: 8px;
+    background-color: #1087e7;
+    text-align: center;
+  }
+  
+  .schedule a {
+    color: rgb(245, 245, 10);
+    text-decoration: none;
+  }
+  
+  .schedule a:hover {
+    size: 5px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .footer-section p, .footer-section ul, .footer-section a {
+    color: #bbb;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    justify-content: center;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 240px) {
+    .footer-section {
+      display: block;
+    }
+  }
+  
+  .footer-section .foot a {
+    padding: 2px;
+  }
+  
+  .navbar h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .form-group {
+    font-weight: bold;
+  }
+  
+  /* Responsive table for small screens */
+  @media (max-width: 600px) {
+    .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td, .schedule-table tr {
+      display: block;
+    }
+  }
+  

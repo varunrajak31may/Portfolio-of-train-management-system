@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page</title>
+    <link rel="stylesheet">
+    <style>
+        .profile-container {
+            background-color: #41e5fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            justify-content: center;
+            height: 588px;
+            padding: auto;
+        }
+        
+        .profile-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .profile-pic {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-bottom: 10px;
+        }
+        
+        .profile-name {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        #profile-details {
+            padding: 20px;
+            text-align: left;
+        }
+        
+        #profile-details p {
+            margin: 42px 0;
+        }
+        
+        .profile-actions {
+           
+            padding: 10px;
+            background-color: #35a6ed;
+        }
+        
+       
+       
+    </style>
+</head>
+<body>
+    <center>
+
+  
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="user.jpg" alt="Profile Picture" class="profile-pic">
+            <h1 class="profile-name"></h1>
+        </div>
+        <div id="profile-details">
+            <p id="username"><strong>Username:</strong> <span id="username-value"></span></p>
+            <p id="email"><strong>Email:</strong> <span id="email-value"></span></p>
+            <p id="phone"><strong>Phone:</strong> <span id="phone-value"></span></p>
+            <p id="joined"><strong>Joined:</strong> <span id="joined-value"></span></p>
+        </div>
+        
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const authenticatedUser = localStorage.getItem('authenticatedUser');
+            if (!authenticatedUser) {
+                alert('No authenticated user found!');
+                return;
+            }
+
+            const employees = JSON.parse(localStorage.getItem('employe')) || [];
+            const user = employees.find(emp => emp.uname === authenticatedUser);
+
+            if (user) {
+                document.getElementById('username-value').textContent = user.uname;
+                document.getElementById('email-value').textContent = user.email;
+                document.getElementById('phone-value').textContent = user.phoneno;
+                document.getElementById('joined-value').textContent = user.newdate;
+            } else {
+                alert('User data not found!');
+            }
+        });
+
+        function authenticateUser(username) {
+            localStorage.setItem('authenticatedUser', username);
+            authenticateUser(uname); 
+        }
+  
+</script>
+</center>
+</body>
+</html>

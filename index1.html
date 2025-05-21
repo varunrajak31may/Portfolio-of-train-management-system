@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .nav{
+            background-color: rgb(168, 206, 14);
+            height:100px;
+            text-align: center;
+            justify-content: space-between ;
+            display: flex;  
+        }
+        .nav{
+            list-style-type: none;
+        }
+        header{
+            background-color: rgb(168, 206, 14);
+              height: 100px;
+            text-align: center;
+
+        }
+        .nav{
+            height: auto;
+        }
+
+        .test{
+            display: none;
+            position: absolute;
+            
+        }
+        .test1{
+            display: none;
+        }
+        #toggle:checked~ .nav{
+            display: inline-grid;
+            margin:10px auto;
+            
+        }
+       
+        @media(max-width: 800px){
+          .test{
+            display:block;
+            
+            
+          }
+          .nav{
+            display: none;
+          }
+        }
+     
+
+    </style>
+</head>
+<body>
+
+   
+    <header>
+        <label class="test" for="toggle">💀</label>
+        <input class="test1" type="checkbox" id="toggle">     
+        <div class="nav">
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>Signup</li>
+        </div>
+    </header>
+</body>
+</html>
+
+
+<section id="features">
+    <div class="text">
+     <h1>Features</h1>
+    </div>
+   <div class="container">
+       <div class="feature">
+           <img src="real-time.png" alt="Feature 1 Icon">
+           <h3>Real-time Schedules</h3>
+           <p>View and manage real-time train schedules.</p>
+       </div>
+       <div class="feature">
+           <img src="calendar.png" alt="Feature 2 Icon">
+           <h3>Booking Management</h3>
+           <p>Efficiently manage passenger bookings and reservations.</p>
+       </div>
+       <div class="feature">
+           <img src="help-desk.png" alt="Feature 3 Icon">
+           <h3>Customer Support</h3>
+           <p>24/7 customer support available for assistance.</p>
+       </div>
+   </div>
+ </section>

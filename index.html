@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css"
+    <title></title>
+    
+        
+
+    </style>
+</head>
+<body
+    <section>
+      <div class="demo-banner-wrap view h-35">
+          <div class="tourism-view">
+          <div class="flight"></div>
+          <div class="train"></div>
+          <div class="bus"></div>
+          <div class="cruise"></div>
+          <div class="background">
+              <div class="water"></div>
+          </div>
+          <svg>
+              <filter height="100%" id="turbulence" width="100%" x="0" y="0">
+                  <feTurbulence baseFrequency="0.02 0.05" id="sea-filter" numOctaves="3" seed="2">
+  
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" scale="20"> </feDisplacementMap>
+              <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1" repeatCount="indefinite" values="0.02 0.06;0.04 0.08;0.02 0.06"> </animate>
+          </filter>
+      </svg>
+  </div>
+  </section>
+</body>
+</html>
+<!--html-->
+
+<!--style-->
+
+.

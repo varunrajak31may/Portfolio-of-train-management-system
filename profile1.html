@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Section with Gradient Background</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(241, 245, 255);
+        }
+        
+        .profile-card {
+            background-image: url('img24.jpg');
+         /*   background: linear-gradient(135deg, #6a11cb, #2575fc);*/
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 350px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        
+        .profile-header {
+            padding: 20px;
+        }
+        
+        .profile-img img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 10px;
+        }
+        
+        .profile-header h2 {
+            margin: 10px 0;
+        }
+        
+        .profile-header .title {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #dcdcdc;
+        }
+        
+        .profile-body {
+            padding: 20px;
+        }
+        
+        .profile-body p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        
+        .profile-body i {
+            margin-right: 10px;
+            color: #dcdcdc;
+        }
+        
+        .profile-footer {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        
+        
+      
+        
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-img">
+                <img src="anime.jpg" alt="User Avatar">
+                <div class="profile-body">
+                    <p id="username"><strong>Username:</strong> <span id="username-value"></span></p>
+                    <p id="email"><strong>Email:</strong> <span id="email-value"></span></p>
+                    <p id="phone"><strong>Phone:</strong> <span id="phone-value"></span></p>
+                    <p id="joined"><strong>Joined:</strong> <span id="joined-value"></span></p>
+                </div>
+               
+            </div>
+            <p class="title">Welcome</p>
+        </div>
+       
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const authenticatedUser = localStorage.getItem('authenticatedUser');
+            if (!authenticatedUser) {
+                alert('No authenticated user found!');
+                return;
+            }
+
+            const employees = JSON.parse(localStorage.getItem('employe')) || [];
+            const user = employees.find(emp => emp.uname === authenticatedUser);
+
+            if (user) {
+                document.getElementById('username-value').textContent = user.uname;
+                document.getElementById('email-value').textContent = user.email;
+                document.getElementById('phone-value').textContent = user.phoneno;
+                document.getElementById('joined-value').textContent = user.newdate;
+            } else {
+                alert('User data not found!');
+            }
+        });
+
+        function authenticateUser(username) {
+            localStorage.setItem('authenticatedUser', username);
+            authenticateUser(uname); 
+        }
+  
+    </script>
+
+</body>
+</html>

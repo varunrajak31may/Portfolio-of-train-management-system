@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://docs.google.com/spreadsheets/d/1bZRPZzOnXHo910xg3-26g8hzSioyL4nKVB-uqDUBmos/edit?gid=0#gid=0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+    <title>Train Management System</title>
+    <link rel="icon" type="image/x-icon" href="train.png">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+      <label class="temp" for="toggle">
+        <img src="indianrail.png" alt="logo" class="logo">
+      </label>
+      <input class="test1" type="checkbox" id="toggle">
+      <nav>
+        <h1>INDIAN RAILWAYS</h1>
+        <ul>
+          <li><a href="#features">Feature</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#schedule-section">Schedule</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="portfolio2.html">Feedback</a></li>
+          <li><a href="" id="logintext"></a></li>
+          <li><a href="profile1.html">Profile</a></li>
+          <li><a href="#payment-container">Payment</a></li>
+         
+        </ul>
+    
+      </nav>
+      <img id="logo-size" src="logo1.png"  alt="">
+    </div>
+  </header>
+
+<section>
+  <nav class="one">
+  <marquee behavior="scroll" direction="left" scrollamount="15">Please help indian railway and government of india in moving towards a digitalized and cashless economy.Eradicate black money.</marquee>   
+
+
+</nav>
+</section>
+
+
+  <div class="mp4" style=>
+    <img src="ig.jpg" width="100%"  height=" 650px" alt="transportaion">
+</div>
+
+
+
+
+<section>
+   <div class="card-section">
+    <div class="card test">
+        <img src="img5.jpg" alt="">
+        <H5>SAMTA EXPRESS-12807</H5>
+        <a class="test" href="https://www.trainman.in/running-status/12807">RUNNING STATUS➜</a>
+        
+    </div>
+    <div class="card">
+        <img src="img19.jpg" alt="">
+        <H5>RAJDHANI EXPRESS-12423</H5>
+        <a  class="test" href="https://www.ixigo.com/trains/12807/running-status">RUNNING STATUS➜</a>
+    </div>
+    <div class="card">
+        <img src="img1.jpg" alt="">
+        <H5>SATABDHI EXPRESS-12010</H5>
+        <a  class="test" href="https://www.ixigo.com/trains/12807/running-status">RUNNING STATUS➜</a>
+    </div>
+    <div class="card">
+        <img src="img6.jpg" alt="">
+        <H5>BANDE BHART-22435</H5>
+        <a class="test"href="https://www.railyatri.in/live-train-status/22435-vande-bharat-express-bsb-to-ndls">RUNNING STATUS</a>
+    </div>
+    </div>
+</section>
+   <section id="schedule-section">
+    <nav class="t1">
+        <h2 style= "text-align: center;">  Train scheduling
+        </h2>
+    </nav>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Train</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Duration</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Express 101</td>
+                    <td>10:00 AM</td>
+                    <td>12:30 PM</td>
+                    <td>2h 30m</td>
+                    <td>On Time</td>
+                </tr>
+                <tr>
+                    <td>Local 202</td>
+                    <td>11:15 AM</td>
+                    <td>1:45 PM</td>
+                    <td>2h 30m</td>
+                    <td>Delayed</td>
+                </tr>
+                <tr>
+                    <td>Regional 303</td>
+                    <td>1:00 PM</td>
+                    <td>3:30 PM</td>
+                    <td>2h 30m</td>
+                    <td>On Time</td>
+                </tr>
+                <tr>
+                    <td>Express 404</td>
+                    <td>3:45 PM</td>
+                    <td>6:15 PM</td>
+                    <td>2h 30m</td>
+                    <td>Cancelled</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<br>
+<div id="payment-container">
+  <h2>Payment Details</h2>
+  <form id="paymentForm">
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required maxlength="19" oninput="formatCardNumber(this)">
+      
+      <label for="expiryDate">Expiry Date</label>
+      <input type="text" id="expiryDate" placeholder="MM/YY" required maxlength="5" oninput="formatExpiryDate(this)">
+      
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" placeholder="123" required maxlength="3">
+      
+      <button id="pay" type="submit">Pay Now</button>
+  </form>
+</div>
+<section>
+    <div class="card-section">
+    <div class="card">
+        <img src="img7.jpg" alt="">
+        <h5>Maharajas'Express</h5>
+        <p> Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on a sojourn to the era of bygone stately splendour of princely states. Sylvan furnishings, elegant ambience and modern amenities are amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s Leading Luxury train” by World Travel Awards consecutively for last six years. </p>
+        <a  class="test"href="https://en.wikipedia.org/wiki/Maharajas%27_Express">Read More➜</a>
+    </div>
+    <div class="card">
+        <img src="img8.jpg" alt="">
+        <h5>Bharat Gaurav Tourist Train</h5>
+       <p>IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier accommodation on train specially designed to promote domestic tourism in India. This train runs on various theme based circuits covering pilgrimage and heritage destinations in its itinerary on a 5 days to 20 days trip and showcase India’s rich cultural heritage.</p>
+       <a class="test"href="https://www.irctctourism.com/bharatgaurav">Read More➜</a>
+    </div>
+    <div class="card">
+        <img src="img9.jpg" alt="">
+        <h5>Rail Tour Packages</h5>
+        <p>IRCTC offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday packages/ Land packages to these destinations are also available.</p>
+        <a class="test" href="https://www.irctctourism.com/">Read More➜</a>
+    </div>
+<div>
+</section>
+<br>
+<div class="train-container">
+  
+  <h2>Check Seat Availability</h2>
+  <input type="number">
+  <div class="seat-layout">
+      <!-- Seats will be dynamically generated here -->
+  </div>
+  <button id="check" onclick="checkAvailability()">Check Availability</button>
+</div>
+
+<section id="features">
+    <h1>FEATURE</h1>
+    <br>
+    <div class="features">
+      <div class="feature">
+        <img src="tracking.png" alt="">
+        <i class="fas fa-train"></i>
+        <p>Real-time Train Tracking</p>
+      </div>
+      <div class="feature">
+        <img src="time-mangement.png" alt="">
+        <i class="fas fa-calendar-alt"></i>
+        <p>Schedule Management</p>
+      </div>
+      <div class="feature">
+        <img src="booking.png" alt="">
+        <i class="fas fa-ticket-alt"></i>
+        <p>Online Ticket Booking</p>
+      </div>
+      <div class="feature">
+        <img src="train-station.png" alt="">
+        <i class="fas fa-users"></i>
+        <p>Passenger Management</p>
+      </div>
+      <div class="feature">
+        <img src="data.png" alt="">
+        <i class="fas fa-chart-line"></i>
+        <p>Analytics and Reports</p>
+      </div>
+      <div class="feature">
+        <img src="help-desk.png" alt="">
+        <i class="fas fa-chart-line"></i>
+        <p>Help desk</p>
+      </div>
+    </div>
+  </section>
+<br>
+<section id="booking">
+    <div class="container">
+        <h2>Book Your Ticket</h2>
+        <form>
+            <div class="form-group">
+                <label for="departure">Departure Station</label>
+                <input type="text" id="departure" name="departure" required>
+            </div>
+            <div class="form-group">
+                <label for="arrival">Arrival Station</label>
+                <input type="text" id="arrival" name="arrival" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Travel</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+            </div>
+            <button id="bookNowBtn"type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+</section>
+<br>
+<section id="about">
+  <div class="container">
+      <div class="about-content">
+          <h2>About Us</h2>
+          <p>Welcome to our Train Management System. At varun-Tech-ltd, we are dedicated to...</p>
+          <p>Our mission is to simplify and enhance the journey for millions of passengers worldwide...</p>
+          <p>Join us on our journey to transform train travel into a seamless and enjoyable experience for all.</p>
+      </div>
+      <div class="about-image">
+          <img src="img2.jpg" alt="About Us Image">
+      </div>
+  </div>
+</section>
+<br>
+<section id="contact">
+  <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need assistance? Reach out to us!</p>
+      <form >
+          <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+      </form>
+  </div>
+</section>
+<br>
+<section class="schedule">
+    <h1>Real Time Train sechedule</h1>
+   <marquee behavior="" direction="right"><a href="https://www.indianrail.gov.in/enquiry/SCHEDULE/TrainSchedule.html">--Train sechedule--</a></marquee>
+   </section>
+   <br>
+   <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>We provide the best train management services.</p>
+      </div>
+
+
+<br>
+      
+    
+    <br>
+    </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.irctc.co.in/nget/train-search">E-Tickit</a></li>
+          <li><a href="https://contents.irctc.co.in/en/RefundCancellationRules.pdf">Refunds Rules</a></li>
+          <li><a href="https://contents.irctc.co.in/en/About_IRCTC_eWallet.pdf">IRCTC Wallet</a></li>
+          <li><a href="https://corover.ai/irctc/">Ask Disha ChatBot</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: varunrajak30@gmail.com</p>
+        <p>Phone: +91 9300563281</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Train Management System. All Rights Reserved.</p>
+    </div>
+  </footer>
+<h1>Custom Audio Player</h1>
+    <div class="audio-player">
+        <button id="playPauseBtn" onclick="player()">Play</button>
+        <input type="range" id="seekBar" value="0">
+    </div>
+
+    <audio id="audio" src="audio.mp3"></audio>
+<script>
+
+  document.getElementById("check").addEventListener("click", function () {
+    Swal.fire({
+        title: " Already occupied failed",
+        text: "Seat unavilable error",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "check again!"
+    })
+  });
+
+
+
+
+  document.getElementById("pay").addEventListener("click", function () {
+    Swal.fire({
+        title: "Payment sucessful",
+        text: "succesfully",
+        icon: "success",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Done!"
+    })
+  });
+  document.getElementById("bookNowBtn").addEventListener("click", function () {
+    Swal.fire({
+        title: "Confirm Booking?",
+        text: "Are you sure you want to book this ticket?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Book it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                "Booked!",
+                "Your ticket has been successfully booked.",
+                "success"
+            );
+            // Call your booking function here
+            bookTicket();
+        }
+    });
+});
+
+// Example function for booking process
+function bookTicket() {
+    console.log("Booking confirmed and processed...");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const islogin=localStorage.getItem('islogin');
+    const logintext=document.getElementById('logintext');
+    if (islogin){
+        logintext.innerHTML='<a href="#" id="logouttext">Logout</a>';
+        document.getElementById('logouttext').addEventListener('click',logout);
+    
+      }
+      else{
+        logintext.innerHTML='<a href="./login.html" id="logintext">Login</a>';
+      }
+ function logout(){
+    localStorage.removeItem('islogin');
+    updatenav();
+        
+    Swal.fire({
+        title: "logout",
+        text: "Logout",
+        icon: "success"
+      });
+ }
+function updatenav(){
+    const islogin=localStorage.getItem('islogin');
+    const logintext=document.getElementById('logintext');
+    if (islogin){
+        logintext.innerHTML='<a href="#" id="logouttext">Logout</a>';
+        document.getElementById('logouttext').addEventListener('click',logout);
+    }
+    else{
+        logintext.innerHTML='<a href="./login.html" id="logintext">Login</a>';
+    }
+    window.onload=updatenav;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.test').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      const isLogin = localStorage.getItem('islogin');
+      if (!isLogin) {
+        Swal.fire({
+          title: "you can't accesss",
+          text: "phele  login karo !",
+          icon: "error"
+        });
+      } else {
+        Swal.fire({
+          title: "Access succesfull",
+          text: "Good job",
+          icon: "success"
+        }).then(() => {
+          window.location.href = button.href;
+        });
+      }
+    });
+  });
+});
+</script>
+
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const seekBar = document.getElementById('seekBar');
+
+        function player(){
+          audio.play();
+            if (audio.paused) {
+              playPauseBtn.textContent = 'Play';
+            } else {
+              playPauseBtn.textContent = 'Pause';
+            }
+        }
+
+        function pause(){
+          audio.pause();
+            if (audio.paused) {
+              playPauseBtn.textContent = 'Play';
+            } else {
+              playPauseBtn.textContent = 'Pause';
+            }
+        }
+
+        window.addEventListener('load', () => {
+          player();
+      });
+
+        audio.addEventListener('timeupdate', () => {
+            seekBar.value = (audio.currentTime / audio.duration) * 100;
+        });
+
+        seekBar.addEventListener('input', () => {
+            audio.currentTime = (seekBar.value / 100) * audio.duration;
+        });
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

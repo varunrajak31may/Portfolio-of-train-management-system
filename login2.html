@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<title>Login Form</title>
+<style>
+body {
+  background: linear-gradient(to right, #9087D7, #E885D7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 350px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background: #ddd;
+  outline: none;
+}
+
+button {
+  background-color: #515898;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #515898;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 100px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">
+    <img src="l.webp" alt="Logo"> 
+  </div>
+  <h1>LOG IN</h1>
+  <form>
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" id="uname" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" placeholder="Enter your password">
+    </div>
+    <div class="form-group">
+      <input type="checkbox" id="remember-me">
+      <label for="remember-me">Remember me</label>
+    </div>
+    <button type="submit" onclick="gologin(event)">Login</button>
+    <div class="linkform">
+      <a href ="signup2.html">Signup</a>
+    </div>
+  </form>
+  
+</div>
+<script>
+  
+  const islogin=localStorage.getItem('islogin');
+  const logintext=document.getElementById('logintext');
+  if (islogin){
+    logintext.innerHTML='<a href="#" id="logintext">Logout</a>';
+    document.getElementById('logintext').addEventListener('click',logout);
+
+  }
+  else{
+    logintext.innerHTML='<a href="#" id="logintext">Login</a>';
+  }
+  function logout(){
+    localStorage.removeItem('islogin');
+        updatenav();
+        
+        Swal.fire({
+          title: "logout",
+          text: "Logout",
+          icon: "success"
+        });
+  }
+    function gologin(event) {
+        event.preventDefault();
+        const username = document.getElementById('uname').value;
+        const password = document.getElementById('pass').value;
+      //  const u1 = localStorage.getItem('uname' );
+      //  const u3 =localStorage.getItem('email')
+       // const p1 = localStorage.getItem('pass');
+    
+      const employe= JSON.parse(localStorage.getItem('employe')) || [];
+      const user = employe.find((user) => user.uname===username && user.pass===password);
+      if(user) {
+        Swal.fire({
+            title: "Sucessfully registor!",
+            text: "You clicked the button!",
+            icon: "success"
+          });
+          localStorage.setItem('islogin','true');
+          localStorage.setItem('authenticatedUser', username);
+
+        window.location.href = './collage.html';
+      }
+      else{
+        alert('login failed');
+      }
+    }
+</script>
+</body>
+</html>
